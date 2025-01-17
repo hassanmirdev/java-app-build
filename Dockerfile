@@ -12,7 +12,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Step 2: Use a smaller OpenJDK 17 image for running the WAR file
-FROM openjdk:17-jre-slim
+FROM openjdk:17-slim
 
 # Set the working directory for the final image
 WORKDIR /app
