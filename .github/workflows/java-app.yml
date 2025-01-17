@@ -22,8 +22,12 @@ jobs:
       with:
         java-version: '17'
         distribution: 'microsoft'
-
-    # Step 3: Build the Java application with Maven (you can replace this with Gradle if needed)
+ # setup mavev
+    - name: setup Maven
+      uses: stCarolas/setup-maven@v5
+      with: 
+       maven-version: 3.9.0
+ # Step 3: Build the Java application with Maven (you can replace this with Gradle if needed)
     - name: Build with Maven
       run: mvn clean install -DskipTests
    
